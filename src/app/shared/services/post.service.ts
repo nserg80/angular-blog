@@ -17,13 +17,13 @@ export class PostService {
 
   create(post: Post): Observable<Post> {
     return this.http.post(`${environment.fbDbUrl}/posts.json`, post)
-    .pipe(map((response: FbCreateResponse) => {
-      return {
-        ...post,
-        id: response.name,
-        date: new Date(post.date)
-      }
-    }))
+      .pipe(map((response: FbCreateResponse) => {
+        return {
+          ...post,
+          id: response.name,
+          date: new Date(post.date)
+        }
+      }))
   }
 
 }

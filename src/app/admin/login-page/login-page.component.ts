@@ -13,7 +13,7 @@ export class LoginPageComponent implements OnInit {
 
   form: FormGroup
   submitted = false
-  showMessage = false
+  message: string
 
   constructor(
     public auth: AuthService,
@@ -25,7 +25,9 @@ export class LoginPageComponent implements OnInit {
 
     this.route.queryParams.subscribe((params: Params) => {
       if(params['loginAgain']) {
-        this.showMessage = true
+        this.message = 'Please, enter data'
+      } else if (params['authFailed']) {
+        this.message = "Session has expired. Please, login again"
       }
     })
 
