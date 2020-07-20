@@ -35,5 +35,4 @@ export class DashboardPageComponent implements OnInit,  OnDestroy {
       this.deleteSubscription.unsubscribe()
     }
   }
-
 }
