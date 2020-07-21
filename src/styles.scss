@@ -1,3 +1,5 @@
+// temporary styles, refactoring needed
+
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 @import '~quill/dist/quill.core.css';
 @import '~quill/dist/quill.snow.css';
@@ -138,6 +140,13 @@ img {
   background: var(--light-color);
   color: #333;
   border-radius: 5px;
+}
+
+.alert-wrap {
+  position: fixed;
+  top: 50px;
+  right: 40px;
+  max-width: 200px;
 }
 
 .alert {
