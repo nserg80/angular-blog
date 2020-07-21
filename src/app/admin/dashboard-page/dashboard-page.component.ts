@@ -18,7 +18,7 @@ export class DashboardPageComponent implements OnInit,  OnDestroy {
 
   constructor(
     private postService: PostService,
-    private alertServise: AlertService
+    private alertService: AlertService
   ) { }
   
   ngOnInit() {
@@ -29,7 +29,7 @@ export class DashboardPageComponent implements OnInit,  OnDestroy {
   remove(id:string) {
     this.deleteSubscription = this.postService.remove(id).subscribe(() => {
       this.posts = this.posts.filter(post => post.id !== id)
-      this.alertServise.danger('Post was deleted')
+      this.alertService.danger('Post was deleted')
     })
   }
   ngOnDestroy() {
