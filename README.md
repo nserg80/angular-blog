@@ -1,3 +1,4 @@
+#  Зroject only for studying angular. Сss - temporary styles
 # AngularBlog
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.4.
